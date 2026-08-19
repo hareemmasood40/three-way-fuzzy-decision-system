@@ -1,0 +1,4 @@
+case_id,positive,neutral,negative
+case_1,0.70,0.10,0.05
+case_2,0.20,0.20,0.50
+case_3,0.35,0.25,0.20

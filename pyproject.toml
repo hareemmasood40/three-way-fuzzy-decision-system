@@ -1,0 +1,42 @@
+[project]
+name = "three-way-fuzzy-decision-system"
+version = "0.1.0"
+description = "A Python implementation and educational demonstration of picture fuzzy numbers and three-way decisions under uncertainty, inspired by MPhil research on picture fuzzy rough sets."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Hareem" }]
+keywords = [
+    "fuzzy-logic",
+    "picture-fuzzy-sets",
+    "rough-sets",
+    "three-way-decisions",
+    "uncertainty",
+    "decision-theory",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Intended Audience :: Science/Research",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+three-way-fuzzy = "three_way_fuzzy.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/three_way_fuzzy"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
