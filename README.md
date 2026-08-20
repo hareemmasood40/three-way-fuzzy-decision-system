@@ -172,6 +172,29 @@ and refusal uncertainty (0.15) is below the allowed commitment
 threshold (0.25).
 ```
 
+## Running Tests
+
+The project includes an automated test suite (pytest) covering:
+
+- picture fuzzy number validation and calculations (refusal, score, accuracy)
+- three-way decision logic (ACCEPT / DEFER / REJECT, including threshold edge cases)
+- the Picture Fuzzy Point Operator (PFPO), single-step and iterative
+- the thesis-inspired numerical validation example
+
+After installing the dev dependencies (see Installation above), run:
+
+```bash
+pytest
+```
+
+On Windows, if you are using the project's virtual environment directly:
+
+```bash
+.\.venv\Scripts\python.exe -m pytest
+```
+
+The current test suite contains 24 tests, all of which pass.
+
 ## Project Structure
 
 ```text
